@@ -13,11 +13,21 @@
         android:theme="@style/Theme.All_lab"
         tools:targetApi="31">
         <activity
+            android:name=".Lab5.DSSVienActivity"
+            android:exported="true" >
+
+        </activity>
+        <activity
+            android:name=".Lab5.AddSVActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".Lab4.Bai3_ph18450.SignUpActivity"
             android:exported="false" />
         <activity
             android:name=".Lab4.Bai3_ph18450.SignIn_Activity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -29,9 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".Lab4.Bai2_ph18450.Activity_1"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

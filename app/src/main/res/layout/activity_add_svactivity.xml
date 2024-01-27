@@ -1,0 +1,48 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="100dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Thêm Sinh Viên"
+    android:textStyle="bold"
+    android:textSize="20dp"
+    android:layout_marginBottom="20dp"
+    >
+
+</TextView>
+<Spinner
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:id="@+id/spinerScloll"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên sinh viên"
+        android:id="@+id/edtNameSV"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập địa chỉ sinh viên"
+        android:id="@+id/edtDiaChiSV"
+        android:background="@drawable/custom_edittext"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SUMMIT"
+        android:id="@+id/btnSUMMIT"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

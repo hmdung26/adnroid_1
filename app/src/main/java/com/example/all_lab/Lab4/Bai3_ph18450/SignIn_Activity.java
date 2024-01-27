@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.all_lab.Lab5.DSSVienActivity;
 import com.example.all_lab.R;
 
 public class SignIn_Activity extends AppCompatActivity {
@@ -46,7 +47,8 @@ public class SignIn_Activity extends AppCompatActivity {
                     String getPassword = bundle.getString("password");
                     if (user.equals(getUsername) ){
                         if (pass.equals(getPassword)){
-
+                            Intent i = new Intent(SignIn_Activity.this , DSSVienActivity.class);
+                            startActivity(i);
                             Toast.makeText(getApplicationContext(),"Đăng nhập thành công",Toast.LENGTH_LONG).show();
                         }else {
                             Toast.makeText(getApplicationContext(),"Sai mật khẩu",Toast.LENGTH_LONG).show();
