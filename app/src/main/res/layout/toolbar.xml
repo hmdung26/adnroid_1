@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="#1976D2"
+    android:id="@+id/toobar">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+    android:layout_marginEnd="10dp">
+
+    <ImageView
+        android:id="@+id/Timkiem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_search_24"
+        android:layout_marginRight="10dp"/>
+
+        <EditText
+            android:id="@+id/editTextSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tìm kiếm sinh viên"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:visibility="gone" />
+
+
+</LinearLayout>
+    </androidx.appcompat.widget.Toolbar>

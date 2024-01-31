@@ -1,6 +1,7 @@
 package com.example.all_lab.Lab5;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +18,7 @@ public class AddSVActivity extends AppCompatActivity {
      private Spinner schoolSpiner;
      private EditText edtNameSV,edtDiaChiSV;
      private Button btnSUMMIT;
+     private Toolbar toolbar_add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,8 +38,16 @@ public class AddSVActivity extends AppCompatActivity {
         btnSUMMIT = findViewById(R.id.btnSUMMIT);
         SchoolSpinnerAdapter_dunghmph18450 schoolSpinnerAdapterDunghmph18450 = new SchoolSpinnerAdapter_dunghmph18450(this,lst);
         schoolSpiner.setAdapter(schoolSpinnerAdapterDunghmph18450);
-
-
+        toolbar_add = findViewById(R.id.toobar_add);
+        setSupportActionBar(toolbar_add);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar_add.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
         btnSUMMIT.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

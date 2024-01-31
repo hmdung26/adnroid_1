@@ -7,21 +7,27 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.all_lab.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
-public class ListStudentApdaterph18450 extends BaseAdapter {
+public class ListStudentApdaterph18450 extends BaseAdapter implements Filterable {
 
     private final Context context;
-    private final ArrayList<StudenModelph18450> lstSt;
+    private  List<StudenModelph18450> lstSt;
+    private final List<StudenModelph18450> lstStold;
 
 
-    public ListStudentApdaterph18450(Context context, ArrayList<StudenModelph18450> lstSt) {
+
+    public ListStudentApdaterph18450(Context context, List<StudenModelph18450> lstSt) {
         this.context = context;
+        this.lstStold= lstSt;
         this.lstSt = lstSt;
     }
 
@@ -85,5 +91,37 @@ public class ListStudentApdaterph18450 extends BaseAdapter {
             }
         });
         return convertView;
+    }
+
+    @Override
+    public Filter getFilter() {
+
+        return new Filter() {
+            @Override
+            protected FilterResults performFiltering(CharSequence constraint) {
+                String s = constraint.toString();
+                if (s.isEmpty()){
+                    lstSt = lstStold;
+                }else {
+                    List<StudenModelph18450> lstS = new ArrayList<>();
+                    for (StudenModelph18450 st : lstStold){
+                    if (st.getName().toLowerCase().contains(s.toLowerCase())){
+                        lstS.add(st);
+                    }
+                    }
+
+                    lstSt = lstS;
+                }
+                FilterResults filterResults = new FilterResults();
+                filterResults.values = lstSt;
+                return filterResults;
+            }
+
+            @Override
+            protected void publishResults(CharSequence constraint, FilterResults results) {
+            lstSt = (List<StudenModelph18450>) results.values;
+            notifyDataSetChanged();
+            }
+        };
     }
 }

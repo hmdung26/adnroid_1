@@ -1,0 +1,27 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_add_student"
+        android:title="Thêm mới"
+        android:icon="@drawable/icon_add_reaction_24"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_scoreboard"
+        android:title="Bảng điểm"
+
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_attendance"
+        android:title="Điểm danh"
+
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_logout"
+        android:title="Đăng xuất"
+
+        app:showAsAction="never" />
+</menu>
